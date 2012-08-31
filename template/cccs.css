@@ -1,0 +1,20 @@
+/*
+  CCC Stuttgart HTML5 slides template
+
+  Authors: Marco Ziesing (code and design)
+
+*/
+
+
+/* Framework */
+
+.slides.template-cccs > article:not(.nobackground):not(.biglogo) {
+  background: white url(images/cccs-logo-small.png) 690px 565px no-repeat !important;
+} 
+
+/* Slide styles */
+
+.slides.template-cccs article.biglogo {
+  background: white url(images/cccs-logo.png) 50% 50% no-repeat !important;
+}
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+  <head>
+    <title>LightningTalk: WebApplikationen mit Node.js</title>
+
+    <meta charset='utf-8'>
+    <script src='../template/slides.js'></script>
+  </head>
+
+  <body style='display: none'>
+    <link rel="stylesheet" type="text/css" href="../template/cccs.css">
+
+    <section class='slides layout-regular template-default template-cccs'>
+      
+      <article class='biglogo'>
+      </article>
+
+      <article>
+        <h1>
+          WebApplikationen
+          <br>
+          mit Node.js
+        </h1>
+        <p>
+          Marco Ziesing
+          <br>
+          9. August 2012
+        </p>
+      </article>
+      
+      <article class="fill">
+        <p>
+          <img src="images/bet-on-js.png" width="300">
+        </p>
+        <div class="source black">
+         Quelle: Brendan Eich
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          Was ist Node.js?
+        </h3>
+        <ul>
+          <li>JavaScript-basiertes I/O Framework, das auf Googles V8-Engine aufbaut</li>
+          <li>Ereignisgesteuerter Programmablauf, der nicht durch<br>Ein-/Ausgabeoperationen (z.B. Datenbankzugriffe) blockiert wird</li>
+          <li>alle Funktionen mit I/O-Operationen besitzen eine Rückruffunktion (Callback)</li>
+          <li>Schlanker Kern, Basismodule und über 13000 weitere Pakete, die über einen Paketmanager nachgeladen werden können</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>
+          Hallo Welt
+        </h3>
+        <p>Ausgabe auf der Konsole:</p>
+        <pre>console.log("Hallo Welt");</pre>
+        <p>Webserver:</p>
+        <pre>var http = require("http");
+
+http.createServer(function(request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.write("Hallo Welt");
+  response.end();
+}).listen(3000);</pre>
+      </article>
+
+      <article>
+      <h3>Module für WebApps</h3>
+        <div class="build">
+        <ul class="build">
+          <li>Application Framework: Express</li>
+          <li>Template Engine: Jade</li>
+          <li>CSS Pre-Processor: Stylus</li>
+          <li>WebSocket: Socket.IO</li>
+          <li>File Monitor: nodemon</li>
+        </ul>
+        <pre class="build">
+          $ sudo npm install -g express
+          $ express -c stylus
+        </pre>
+        </div>
+      </article>
+
+      <article>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="http://www.nodebeginner.org/">http://www.nodebeginner.org/</a></li>
+          <li><a href="http://expressjs.com/">http://expressjs.com/</a></li>
+          <li><a href="http://learnboost.github.com/stylus/<">http://learnboost.github.com/stylus/</a></li>
+          <li><a href="http://socket.io/">http://socket.io/</a></li>
+          <li><a href="https://github.com/remy/nodemon/">https://github.com/remy/nodemon/</a></li>
+        </ul>
+      </article>
+    </section>
+
+  </body>
+</html>
